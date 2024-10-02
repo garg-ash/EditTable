@@ -3,10 +3,7 @@ import './EditableTable.css'
 
 function EditableTable() {
   
-  const [data, setData] = useState([
-    // { id: 1, name: "Aviyansh", age: 28 },
-    // { id: 2, name: "Ashish", age: 26 },
-  ]);
+  const [data, setData] = useState([]);
 
   
   const [editRow, seteditRow] = useState();

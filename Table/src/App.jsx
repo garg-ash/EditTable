@@ -7,17 +7,23 @@ const [isOpen, setIsOpen] = useState(false)
 
 function handleOpen(){
   console.log("submitted")
-  setIsOpen(!isOpen)
+  setIsOpen(true)
+}
+
+function handleClose(){
+  setIsOpen(false)
 }
 
   return (
     <>
       <div>
-        <button type='submit' onClick={handleOpen}>{!isOpen ? "Open" : "Close"}</button>
+        {!isOpen && (
+          <button type='submit' onClick={handleOpen}>Open</button>
+        )}
 
-        {/* <button type='submit' onClick={handleSubmit}>{isOpen ? "close" : "open"}</button> */}
-        {/* <button type='submit' onClick={handleClose}>Close</button> */}
-
+        {isOpen && (
+        <button type='submit' onClick={handleClose}>close</button>
+        )}
       </div>
       {isOpen && (
         <EditableTable/>
